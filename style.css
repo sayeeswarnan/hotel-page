@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-weight: 300;
+    color: #111;
+}
+
+body {
+    min-height: 1000px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./bg.jpg');
+    background-size: cover;
+}
+
+.banner .content {
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+}
+
+.banner .content h2 {
+    font-size: 5rem;
+    color: #fff;
+}
+
+.banner .content p {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: rgba(255, 0, 0, 0.5);
+    margin-top: 20px;
+    padding: 2px 5px;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.btn:hover {
+    letter-spacing: 4px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky {
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+header.sticky .logo {
+    color: #111;
+}
+
+header .logo span {
+    color: red;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    transition: 0.5s;
+    background-color: transparent;
+}
+
+header.sticky .navigation li a {
+    color: #111;
+}
+
+header .navigation li a:hover {
+    color: aqua;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.row .col50 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.titleText {
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.titleText span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.row .col50 .imgBx {
+    width: 100%;
+    padding: 10px;
+}
+
+.row .col50 .imgBx img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.imgcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.imgcontainer .box {
+    text-align: center;
+}
+
+.imgcontainer .box img {
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imgcontainer2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.imgcontainer2 .box {
+    text-align: center;
+}
+
+.imgcontainer2 .box img {
+    width: 100%;
+}
+
+.Testimonials {
+    background-image: url(./bg2.jpg);
+}
+
+.imgcontainer3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.imgcontainer3 .box {
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.imgcontainer3 .box img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.imgcontainer3 .title .titleText,
+.exp {
+    color: #fff;
+}
+
+#contact {
+    background-image: url('./bg3.jpg');
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 15px;
+    }
+    header .logo {
+        font-size: 1.5rem;
+    }
+    header .navigation li {
+        margin-left: 10px;
+    }
+    .banner .content {
+        width: 100%;
+        min-height: 100vh;
+    }
+    .row .col50 {
+        width: 100%;
+    }
+    .imgcontainer2 {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .imgcontainer3 {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    header {
+        padding: 30px;
+    }
+    header .logo {
+        font-size: 1.8rem;
+    }
+    .banner .content {
+        width: 70%;
+    }
+    .row .col50 {
+        width: 45%;
+    }
+    .imgcontainer2 {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* Add this to handle the hamburger menu */
+.menuToggle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(icons8-hamburger-menu-50\ \(1\).png); /* Replace with your menu icon */
+    background-size: cover;
+    cursor: pointer;
+    display: none; /* Initially hide for larger screens */
+}
+
+@media (max-width: 991px) {
+    header .logo {
+        text-align: center;
+    }
+
+    header .menuToggle {
+        display: block;
+    }
+    header.sticky .navigation{
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    header .navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background:rgba(0, 0, 0, 0.5);
+        top: 70px;
+        left: 0;
+        z-index: 1;
+        text-align: center;
+    }
+    header.sticky .menuToggle {
+        background-color: #333;
+        background: url(icons8-hamburger-menu-50.png);
+        position: fixed;
+        top: 17px;
+        right: 10px;
+        z-index: 2;
+    }
+ 
+    
+    header .navigation li {
+        margin: 10px 0;
+    }
+    
+    header .nav li a {
+        color: #fff;
+    }
+    header .navigation.active {
+        display: flex;
+    }
+
+    header .navigation li {
+        margin: 10px 0;
+    }
+
+    header .navigation li a {
+        color: #f1ecec;
+    }
+}
+
+
+
+
+
+
+
+
+/* Laptop/Desktop Styles (992px and above) */
+/* @media (min-width: 992px) {
+    header {
+        padding: 40px;
+    }
+    header .logo {
+        font-size: 2rem;
+    }
+    .banner .content {
+        width: 900px;
+    }
+    .row .col50 {
+        width: 38%;
+    }
+    .imgcontainer2 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+} */
